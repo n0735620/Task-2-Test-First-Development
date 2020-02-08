@@ -1,0 +1,16 @@
+NMEA-Tests.pro
+headers/earth.h
+headers/geometry.h
+headers/logs.h
+headers/parseNMEA.h
+headers/position.h
+headers/types.h
+logs/NMEA/gga_rmc-1.log
+logs/NMEA/gga_rmc-2.log
+logs/NMEA/gll.log
+src/earth.cpp
+src/geometry.cpp
+src/logs.cpp
+src/nmea-tests.cpp
+src/parseNMEA.cpp
+src/position.cpp
