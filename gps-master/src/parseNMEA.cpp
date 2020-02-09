@@ -21,15 +21,6 @@ namespace NMEA
       bool getLineOk(std::string line);
       bool getvalidchecksum(std::string line);
 
-      int main()
-      {
-        std::string testStr = "$GPGLL,5425.32,N,107.11,W,82319*65";
-        std::string test = "Geeksforgeeks";
-
-        bool testbool = getLineOk(testStr);
-        std::cout << "\n" << testbool << "\n";
-
-      }
 
       bool getLineOk(std::string line){
           bool correctFormat = true;
@@ -56,7 +47,7 @@ namespace NMEA
 
 
           //std::regex testreg("(GP)\w{3}\\d{4}\\d{2}\\D\\d{3}\\d{2}\\D\\d{5}\W\d{2}");
-          std::regex testreg("(GP)(.w{3})(.*)");
+          std::regex testreg("(GP)(.{3})([0-9]{4})(\\.)([0-9]{2})([A-Z])([0-9]{3})(\\.)([0-9]{2})([A-Z])([0-9]{7})");
           if ( regex_match(line, testreg) ) {
 
 
