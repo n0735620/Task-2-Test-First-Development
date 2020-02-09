@@ -8,8 +8,12 @@ namespace NMEA
   bool isWellFormedSentence(std::string)
   {
      element.resize(element.size() -3); //excludes checksum
-      // Stub definition, needs implementing
-      return false;
+     //to get nmea sentence format
+     const std::string firstElement = element.subst(3,3);
+     std::vector<std::string>NMAEElement =stringvector(element);
+     nmeaValues.erase(NMAEElement.begin());
+     return{ElementA, NMAEElement};
+
   }
 
   bool hasValidChecksum(std::string)
