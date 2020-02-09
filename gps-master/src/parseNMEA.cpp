@@ -6,12 +6,40 @@ namespace NMEA
 
   bool isWellFormedSentence(std::string)
   {
+
       // Stub definition, needs implementing
       return false;
   }
 
   bool hasValidChecksum(std::string)
   {
+      int i;
+      char symbol;
+      int checksum = 0;
+
+      for (i=0;i<sym;i++)
+      {
+          symbol = sym[i];
+          switch(Character)
+          {
+          case '$':
+          break;
+          case '*':
+              i = sym;
+              continue;
+          default:
+              if (checksum == 0){
+                  checksum=symbol;
+              }
+              else
+              {
+                  checksum = checksum^symbol;
+              }
+              break;
+
+          }
+      }
+
       // Stub definition, needs implementing
       return false;
   }

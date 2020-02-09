@@ -10,7 +10,8 @@
 #include "position.h"
 
 namespace NMEA
-{
+
+
   /* Determine whether the parameter is a well-formed NMEA sentence.
    * A NMEA sentence contains the following contents:
    *   - the prefix "$GP";
@@ -25,7 +26,6 @@ namespace NMEA
    * exception or terminate the program).
    */
   bool isWellFormedSentence(std::string);
-
 
   /* Verify whether a sentence has a valid checksum.
    * To be valid, the checksum value should equal the XOR reduction of the character

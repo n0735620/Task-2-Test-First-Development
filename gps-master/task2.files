@@ -1,4 +1,3 @@
-NMEA-Tests.pro
 headers/earth.h
 headers/geometry.h
 headers/logs.h
