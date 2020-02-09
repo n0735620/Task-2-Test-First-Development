@@ -11,15 +11,63 @@ namespace NMEA
 {
   bool isWellFormedSentence(std::line)
   {
-    std::ifstream in('gll.log');
-    bool check ='true';
-    while(std::getline(in,line)){
+      struct sentanceData {
+          std::string elementA;
+          std::vector<std::string> nmeaElements;
 
-        std::cout<<"error";
+      } ;
 
-    }
+      std::vector<std::string> extractSentanceData(std::string line);
+      bool getLineOk(std::string line);
+      bool getvalidchecksum(std::string line);
+
+      int main()
+      {
+        std::string testStr = "$GPGLL,5425.32,N,107.11,W,82319*65";
+        std::string test = "Geeksforgeeks";
+
+        bool testbool = getLineOk(testStr);
+        std::cout << "\n" << testbool << "\n";
+
+      }
+
+      bool getLineOk(std::string line){
+          bool correctFormat = true;
+
+          std::string a = line.substr (0,1);
+          std::string b = line.substr (line.size()-3, 1);
+          line.erase(std::remove(line.begin(), line.end(), ','), line.end());
+
+          if (a == "$"){
+              line.erase(0,1);
+
+          }
+          else {
+              correctFormat = false;
+          }
+          if (b == "*"){
+              line.erase(line.size()-3,1);
+
+          }
+          else {
+              correctFormat = false;
+          }
 
 
+
+          //std::regex testreg("(GP)\w{3}\\d{4}\\d{2}\\D\\d{3}\\d{2}\\D\\d{5}\W\d{2}");
+          std::regex testreg("(GP)(.w{3})(.*)");
+          if ( regex_match(line, testreg) ) {
+
+
+              correctFormat = true;
+
+          }
+          else {
+              correctFormat = false;
+          }
+          return correctFormat;
+      }
   }
 
   bool hasValidChecksum(std::string)
