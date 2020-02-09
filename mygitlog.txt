@@ -1,0 +1,76 @@
+commit 7b507a2ccc9575def6fe0b8bf2a7240325c6d097
+Author: Harry <harryD@email.com>
+Date:   Sun Feb 9 22:38:07 2020 +0000
+
+    Signed-off-by: Harry <harryD@email.com>
+    Task 1 completed and added
+
+commit 5158582e48a8bec5e8938849bf63e1f9411940a0
+Author: Harry <harryD@email.com>
+Date:   Sun Feb 9 22:32:35 2020 +0000
+
+    Signed-off-by: Harry <harryD@email.com>
+    
+    task 2 edited and libraries added.
+
+commit c449ed255b282ef2b09949c39cbe274b4c388125
+Author: Harry <harryD@email.com>
+Date:   Sun Feb 9 19:27:16 2020 +0000
+
+    Signed-off-by: Harry <harryD@email.com>
+    
+    Part 3 edited and completed
+
+commit c511545265e647f102a4d27223f9b341b4c463d7
+Author: Harry <harryD@email.com>
+Date:   Sun Feb 9 18:44:21 2020 +0000
+
+    Signed-off-by: Harry <harryD@email.com>
+    
+    more work on task 2 get checksum
+
+commit 30ac4d9ae93d279986334fb4231d5301f0c4b744
+Author: Harry <harryD@email.com>
+Date:   Sun Feb 9 18:16:28 2020 +0000
+
+    Signed-off-by: Harry <harryD@email.com>
+    
+    first stage of part 2 and edits to part 3
+
+commit b49348d5c96ed008367bd00e8890db2e74fdc782
+Author: Harry <harryD@email.com>
+Date:   Sun Feb 9 16:40:40 2020 +0000
+
+    Signed-off-by: Harry <harryD@email.com>
+    
+    completed extract sentence data code
+
+commit 8f667fc91c86034bdf7343ba536f4e9e03ed8c24
+Author: Harry <harryD@email.com>
+Date:   Sun Feb 9 16:06:18 2020 +0000
+
+    Signed-off-by: Harry <harryD@email.com>
+    
+    excluded checksum in task 2
+
+commit 95df45cb75db9448e8d4369240b42fe27240c62c
+Author: Harry <harryD@email.com>
+Date:   Sun Feb 9 12:33:06 2020 +0000
+
+    Signed-off-by: Harry <harryD@email.com>
+    
+    changes made to task 2
+
+commit 0ed08ea219bf9b7b6594e4cd28f0c909a84c19b1
+Author: Harry <harryD@email.com>
+Date:   Sat Feb 8 21:40:01 2020 +0000
+
+    Signed-off-by: Harry <harryD@email.com>
+    
+    created project and pushed to git
+
+commit 3017edd5fd40bfec9b8b630f100c9e530789e834
+Author: n0735620 <56261362+n0735620@users.noreply.github.com>
+Date:   Tue Jan 28 00:27:51 2020 +0000
+
+    added all files for gps
