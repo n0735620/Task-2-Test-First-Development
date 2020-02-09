@@ -1,12 +1,13 @@
 #include "earth.h"
 #include "parseNMEA.h"
 
+
 namespace NMEA
 {
 
   bool isWellFormedSentence(std::string)
   {
-
+     element.resize(element.size() -3); //excludes checksum
       // Stub definition, needs implementing
       return false;
   }
