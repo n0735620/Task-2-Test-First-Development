@@ -1,37 +1,38 @@
 #include "earth.h"
 #include "parseNMEA.h"
-
+#include <vector>
+#include <sstream>
+#include <iostream>
+#include <string>
+#include <regex>
+#include <algorithm>
 
 namespace NMEA
 {
-
   bool isWellFormedSentence(std::line)
   {
     std::ifstream in('gll.log');
-    while(std::getline(in,str)){
+    bool check ='true';
+    while(std::getline(in,line)){
 
         std::cout<<"error";
 
     }
-    bool check = 'true';
+
 
   }
 
   bool hasValidChecksum(std::string)
   {
-      std::string ent = element.substr(1);//removes $ and *checksum
-      ent= ent.substr(0, ent.size()- 3);
-      std::string hexElement = element.substr(value.length()-2);
-      std::transform(hexElement.begin(), hexElement.end(). hexElement.begin(), ::tolower);
-
-      float nmeachecksum =0;
-      for(size_t i = 0; i < ent.length(); i++)
-        nmeachecksum ^=ent[i];
-      std::stringstream stream;//converts nmeachecksum to hex
-      stream << std::hex << nmeachecksum;
-      const std::string result(stream.str());
-
-      return hexElement == result ? true:false;
+      std::string substring = line.substr (1,line.size()-3);
+      std::cout << "\n" << substring;
+      std::string hexstring = line.substr (line.size()-2);
+      std::stringstream ss;
+      ss << hexstring;
+      int hexvalue;
+      ss >> std::hex >> hexvalue;
+      std::cout << "\n" << hexstring << "\n" << hexvalue << "\n";
+      return true;
 
   }
 
