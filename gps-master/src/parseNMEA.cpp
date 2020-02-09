@@ -5,54 +5,42 @@
 namespace NMEA
 {
 
-  bool isWellFormedSentence(std::string)
+  bool isWellFormedSentence(std::line)
   {
-     element.resize(element.size() -3); //excludes checksum
-     //to get nmea sentence format
-     const std::string firstElement = element.subst(3,3);
-     std::vector<std::string>NMAEElement =stringvector(element);
-     nmeaValues.erase(NMAEElement.begin());
-     return{ElementA, NMAEElement};
+    std::ifstream in('gll.log');
+    while(std::getline(in,str)){
+
+        std::cout<<"error";
+
+    }
+    bool check = 'true';
 
   }
 
   bool hasValidChecksum(std::string)
   {
-      int i;
-      char symbol;
-      int checksum = 0;
-
-      for (i=0;i<sym;i++)
-      {
-          symbol = sym[i];
-          switch(Character)
-          {
-          case '$':
-          break;
-          case '*':
-              i = sym;
-              continue;
-          default:
-              if (checksum == 0){
-                  checksum=symbol;
-              }
-              else
-              {
-                  checksum = checksum^symbol;
-              }
-              break;
-
-          }
-      }
-
+      std::string ent = element.substr(1);
+      ent= ent.substr(0, ent.size()- 3);
       // Stub definition, needs implementing
-      return false;
+      return {"",{}};
+
+
+
   }
 
   SentenceData extractSentenceData(std::string)
   {
-      // Stub definition, needs implementing
-      return {"",{}};
+      element.resize(element.size() -3); //excludes checksum
+      //to get nmea sentence format
+      const std::string ElementA = element.subst(3,3);
+      std::vector<std::string>NMAEElement =stringvector(element);
+      nmeaValues.erase(NMAEElement.begin());
+      std::vector<string>
+      stringvector(std::string line){
+
+      }
+
+      return{ElementA, NMAEElement};
   }
 
   GPS::Position positionFromSentenceData(SentenceData)
