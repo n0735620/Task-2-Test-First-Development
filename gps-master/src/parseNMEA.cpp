@@ -27,22 +27,30 @@ namespace NMEA
       float nmeachecksum =0;
       for(size_t i = 0; i < ent.length(); i++)
         nmeachecksum ^=ent[i];
+      std::stringstream stream;//converts nmeachecksum to hex
+      stream << std::hex << nmeachecksum;
+      const std::string result(stream.str());
+
+      return hexElement == result ? true:false;
 
   }
 
-  SentenceData extractSentenceData(std::string)
-  {
-      element.resize(element.size() -3); //excludes checksum
-      //to get nmea sentence format
-      const std::string ElementA = element.subst(3,3);
-      std::vector<std::string>NMAEElement =stringvector(element);
-      nmeaValues.erase(NMAEElement.begin());
-      std::vector<string>
-      stringvector(std::string line){
 
+  std::vector<std::string> extractSentanceData(std::string line)
+  {
+      line.resize(line.size()-3);//Gets rid of $ and checksum
+      line.erase (0,3);
+      std::vector<std::string> returnVector;
+      std::cout << line;
+      std::stringstream ss(line);
+      while(ss.good()){
+          std::string element;
+          getline(ss, element, ',');
+          returnVector.push_back(element);
       }
 
-      return{ElementA, NMAEElement};
+      return returnVector;
+
   }
 
   GPS::Position positionFromSentenceData(SentenceData)
