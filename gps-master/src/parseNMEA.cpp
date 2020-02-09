@@ -19,12 +19,14 @@ namespace NMEA
 
   bool hasValidChecksum(std::string)
   {
-      std::string ent = element.substr(1);
+      std::string ent = element.substr(1);//removes $ and *checksum
       ent= ent.substr(0, ent.size()- 3);
-      // Stub definition, needs implementing
-      return {"",{}};
+      std::string hexElement = element.substr(value.length()-2);
+      std::transform(hexElement.begin(), hexElement.end(). hexElement.begin(), ::tolower);
 
-
+      float nmeachecksum =0;
+      for(size_t i = 0; i < ent.length(); i++)
+        nmeachecksum ^=ent[i];
 
   }
 
